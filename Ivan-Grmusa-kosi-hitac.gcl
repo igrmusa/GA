@@ -1,0 +1,167 @@
+dim 500 220
+
+
+% namestanje pocetne brzine i  ugla pod kojim se ispaljuje kosi hitac
+number v0 33
+number ugao 60
+
+
+ang_origin 15 15
+ang_picture 2 2 500 150
+ang_drawsystem0
+linethickness 0.75
+background 122 128 144
+% konstante
+number PI 3.14
+number x0 15 
+number y0 15
+
+
+
+% gravitaciono ubrzanje
+number g_sunce 274.1
+number g_merkur 3.703
+number g_venera 8.872
+number g_zemlja 9.8067
+number g_mesec 1.625
+number g_mars 3.728
+number g_jupiter  25.93
+number g_saturn  11.19
+number g_uran 9.01
+number g_neptun 11.28
+
+point sekunde 0 0 20 0
+getx t sekunde
+
+fontsize 15
+point l_sunce 20 205
+color 255 255 0
+printat l_sunce { Sunce }
+
+point  l_merkur 20 200
+color 127 0 0
+printat l_merkur { Merkur }
+
+point l_venera 20 195
+color 0 0 139
+printat l_venera { Venera }
+
+point l_zemlja 20 190
+color 0 255 127
+printat l_zemlja { Zemlja }
+
+point l_mesec 30 185
+color 0 0 0 
+printat_l l_mesec { Mesec }
+
+point l_mars 19 180
+color  255 140 0
+printat l_mars { Mars }
+
+point l_jupiter 20 175
+color  255 31 143
+printat l_jupiter { Jupiter }
+
+
+point l_saturn 20 170
+color  51 51 255
+printat l_saturn { Saturn }
+
+point l_uran 20 165
+color  255 105 180
+printat l_uran { Uran }
+
+point l_neptun 20 160
+color  0 255 255
+printat l_neptun { Neptun }
+
+
+
+
+color 0 0 0 
+expression radiant  { ugao * 3.14 /180 }
+
+expression y_sunce { y0 + v0*t *sin(radiant)-0.5*t*t*g_sunce}
+expression x_sunce { x0 + v0*t *cos(radiant)}
+point sunce x_sunce y_sunce
+cmark sunce
+
+
+expression y_merkur { y0 + v0*t *sin(radiant)-0.5*t*t*g_merkur}
+expression x_merkur { x0 + v0*t *cos(radiant)}
+point merkur x_merkur y_merkur
+cmark merkur
+
+
+expression y_venera { y0 + v0*t *sin(radiant)-0.5*t*t*g_venera}
+expression x_venera { x0 + v0*t *cos(radiant)}
+point venera x_venera y_venera
+cmark venera
+
+
+expression y_zemlja { y0 + v0*t *sin(radiant)-0.5*t*t*g_zemlja}
+expression x_zemlja { x0 + v0*t *cos(radiant)}
+point zemlja x_zemlja y_zemlja
+cmark zemlja
+
+
+
+expression y_mesec { y0 + v0*t *sin(radiant)-0.5*t*t*g_mesec}
+expression x_mesec { x0 + v0*t *cos(radiant)}
+point mesec x_mesec y_mesec
+cmark mesec
+
+
+
+expression y_mars { y0 + v0*t *sin(radiant)-0.5*t*t*g_mars}
+expression x_mars { x0 + v0*t *cos(radiant)}
+point mars x_mars y_mars
+cmark mars
+
+
+expression y_jupiter { y0 + v0*t *sin(radiant)-0.5*t*t*g_jupiter}
+expression x_jupiter { x0 + v0*t *cos(radiant)}
+point jupiter x_jupiter y_jupiter
+cmark jupiter
+
+
+expression y_saturn { y0 + v0*t *sin(radiant)-0.5*t*t*g_saturn}
+expression x_saturn { x0 + v0*t *cos(radiant)}
+point saturn x_saturn y_saturn
+cmark saturn
+
+
+expression y_uran { y0 + v0*t *sin(radiant)-0.5*t*t*g_uran}
+expression x_uran { x0 + v0*t *cos(radiant)}
+point uran x_uran y_uran
+cmark uran
+
+
+expression y_neptun { y0 + v0*t *sin(radiant)-0.5*t*t*g_neptun}
+expression x_neptun { x0 + v0*t *cos(radiant)}
+point neptun x_neptun y_neptun
+cmark neptun
+
+
+
+
+
+
+animation_frames 60 5
+trace sunce 255 255 0
+trace merkur 127 0 0
+trace venera 0 0 139
+trace zemlja 0 255 127
+trace mesec 0 0 0 
+trace mars  255 140 0
+trace jupiter 255 31 143
+trace saturn 51 51 255
+trace uran 255 105 180
+trace neptun 0 255 255
+
+
+% broj frejmova i broj fremova po sekundi
+
+
+
+
