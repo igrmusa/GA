@@ -2,7 +2,7 @@ dim 500 220
 
 
 % namestanje pocetne brzine i  ugla pod kojim se ispaljuje kosi hitac
-number v0 33
+number v0 25
 number ugao 60
 
 
@@ -30,7 +30,7 @@ number g_saturn  11.19
 number g_uran 9.01
 number g_neptun 11.28
 
-point sekunde 0 0 20 0
+point sekunde 0 0 30 0
 getx t sekunde
 
 fontsize 15
@@ -147,7 +147,7 @@ cmark neptun
 
 
 
-animation_frames 60 5
+animation_frames 55 5
 trace sunce 255 255 0
 trace merkur 127 0 0
 trace venera 0 0 139
@@ -161,6 +161,7 @@ trace neptun 0 255 255
 
 
 % broj frejmova i broj fremova po sekundi
+
 
 
 
